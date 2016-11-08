@@ -2,7 +2,7 @@
 AMP Joomla! (fork from @Lullabot)
 
 # Вам требуется скопировать все эти файлы к себе в шаблон!
-по адресу: http://mysite.ru/my-article.html?amp - будет отображена AMP версия статьи.
+по адресу: `http://mysite.ru/my-article.html?amp` - будет отображена AMP версия статьи.
 
 Вам также необходимо добавить ссылку на AMP версию на странице статьи (article).
 
