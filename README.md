@@ -12,6 +12,11 @@ AMP Joomla! (fork from @Lullabot)
 
 ```<link rel="amphtml" href="http://mysite.ru/my-article.html?amp" />```
 
+Если переопредлен:
+
+`$doc =& JFactory::getDocument();`
+`$doc->addCustomTag( '<link rel="amphtml" href="'.JURI::current().'?tmpl=amp" />' );`
+
 Не волнуйтесь дублей не будет, т.к. на AMP версии есть canonical:
 
 `<link rel='canonical' href='<?php echo JURI::current(); ?>' >`
