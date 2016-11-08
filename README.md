@@ -6,7 +6,7 @@ AMP Joomla! (fork from @Lullabot)
 
 Вам также **необходимо добавить ссылку на AMP версию на странице статьи (article)**.
 
-<link rel="amphtml" href="http://mysite.ru/my-article.html?amp" />
+```<link rel="amphtml" href="http://mysite.ru/my-article.html?amp" />```
 
 Не волнуйтесь дублей не будет, т.к. на AMP версии есть canonical:
 
