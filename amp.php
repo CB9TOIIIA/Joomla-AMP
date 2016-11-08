@@ -22,8 +22,6 @@ use Lullabot\AMP\Validate\Scope;
   $amp->loadHtml($html);
   $amp_html = $amp->convertToAmpHtml();
   // $amp_html = str_replace('<div id="disqus_thread"></div>', '', $amp_html);
-  // $amp_html = str_replace('<noscript><a href="http://comitetsu.disqus.com/?url=ref">View the discussion thread.</a></noscript>', '', $amp_html);
-  // $amp_html = str_replace('<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>', '', $amp_html);
   // dump($amp_html,0,'test');
   ?>
   <meta charset="utf-8">
