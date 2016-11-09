@@ -1,5 +1,5 @@
 # Joomla-AMP - AMP версия для Joomla!
-## (Компонент/CCK - не важен)
+(Компонент/CCK - не важен) - работает со всеми расширениями.
 #Требование: PHP 5.5 and higher
 
 # Вам нужно скопировать все файлы к себе в шаблон!
@@ -7,9 +7,9 @@
 
 ![084141](https://cloud.githubusercontent.com/assets/1074710/20105560/15047ac8-a5e3-11e6-81ad-284e37b1105c.png)
 
-по адресу: `http://mysite.ru/my-article.html?amp` - будет отображена AMP версия статьи.
+по адресу: ```http://mysite.ru/my-article.html?amp``` - будет отображена AMP версия статьи.
 
-Проверить валидность можете по сервису: `https://validator.ampproject.org/#url=`
+Проверить валидность можете по сервису: ```https://validator.ampproject.org/#url=```
 
 ***
 
@@ -19,8 +19,8 @@
 
 Если переопредлен:
 
-`$doc =& JFactory::getDocument();`
-`$doc->addCustomTag( '<link rel="amphtml" href="'.JURI::current().'?tmpl=amp" />' );`
+```$doc =& JFactory::getDocument();
+$doc->addCustomTag( '<link rel="amphtml" href="'.JURI::current().'?tmpl=amp" />' );```
 
 Не волнуйтесь дублей не будет, т.к. на AMP версии есть canonical:
 
@@ -32,12 +32,12 @@
 
 Добавим в full.php - ссылку на AMP версию:
 
-```$document->addCustomTag('<link rel="amphtml" href="'.JURI::current().'?tmpl=amp" />');```
+```$document->addCustomTag('<link rel="amphtml" href="'.JURI::current().'?tmpl=amp" />');
 
-```$desc = JString::trim(strip_tags($this->renderPosition('text')));```
-```$desc_new = htmlspecialchars(JString::substr($desc, 0, 220));```
-```$document->addCustomTag('<meta name="description" content="'.$desc_new.'" />');```
+$desc = JString::trim(strip_tags($this->renderPosition('text')));
+$desc_new = htmlspecialchars(JString::substr($desc, 0, 220));
+$document->addCustomTag('<meta name="description" content="'.$desc_new.'" />');
 
-```$document->addCustomTag('<meta name="article-id" content="'.$item->id.'">');```
-```$document->addCustomTag('<meta name="article-created" content="'.$item->created.'">');```
-```$document->addCustomTag('<meta name="article-modified" content="'.$item->modified.'">');```
+$document->addCustomTag('<meta name="article-id" content="'.$item->id.'">');
+$document->addCustomTag('<meta name="article-created" content="'.$item->created.'">');
+$document->addCustomTag('<meta name="article-modified" content="'.$item->modified.'">');```
