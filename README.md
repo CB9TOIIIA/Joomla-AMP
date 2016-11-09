@@ -19,8 +19,10 @@
 
 Если переопредлен:
 
-```$doc =& JFactory::getDocument();
-$doc->addCustomTag( '<link rel="amphtml" href="'.JURI::current().'?tmpl=amp" />' );```
+```sh
+$document = JFactory::getDocument();
+$document->addCustomTag( '<link rel="amphtml" href="'.JURI::current().'?tmpl=amp" />' );
+```
 
 Не волнуйтесь дублей не будет, т.к. на AMP версии есть canonical:
 
