@@ -1,13 +1,13 @@
 # Joomla-AMP - AMP версия для Joomla!
 (Компонент/CCK - не важен) - работает со всеми расширениями.
-#Требование: PHP 5.5 and higher
+#Требование: PHP 5.5 и выше
 
 # Вам нужно скопировать все файлы к себе в шаблон!
 Для начала распаковать содержимое архива в папку с Вашим шаблоном, чтобы был вот такой примерный вид:
 
 ![084141](https://cloud.githubusercontent.com/assets/1074710/20105560/15047ac8-a5e3-11e6-81ad-284e37b1105c.png)
 
-по адресу: ```http://mysite.ru/my-article.html?amp``` - будет отображена AMP версия статьи.
+По адресу: ```http://mysite.ru/my-article.html?amp``` - будет отображена AMP версия статьи.
 
 Проверить валидность можете по сервису: ```https://validator.ampproject.org/#url=```
 
@@ -34,7 +34,8 @@ $document->addCustomTag( '<link rel="amphtml" href="'.JURI::current().'?tmpl=amp
 
 Добавим в full.php - ссылку на AMP версию:
 
-```$document->addCustomTag('<link rel="amphtml" href="'.JURI::current().'?tmpl=amp" />');
+```sh
+$document->addCustomTag('<link rel="amphtml" href="'.JURI::current().'?tmpl=amp" />');
 
 $desc = JString::trim(strip_tags($this->renderPosition('text')));
 $desc_new = htmlspecialchars(JString::substr($desc, 0, 220));
@@ -42,4 +43,5 @@ $document->addCustomTag('<meta name="description" content="'.$desc_new.'" />');
 
 $document->addCustomTag('<meta name="article-id" content="'.$item->id.'">');
 $document->addCustomTag('<meta name="article-created" content="'.$item->created.'">');
-$document->addCustomTag('<meta name="article-modified" content="'.$item->modified.'">');```
+$document->addCustomTag('<meta name="article-modified" content="'.$item->modified.'">');
+```
