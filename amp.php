@@ -79,8 +79,8 @@ use Lullabot\AMP\Validate\Scope;
       "logo": {
         "@type": "ImageObject",
         "url": "http://mysite.ru/images/logo.png",
-        "width": 218,
-        "height": 84
+        "width": "218",
+        "height": "84"
       }
     },
     "image": {
