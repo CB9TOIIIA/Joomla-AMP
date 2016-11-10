@@ -10,7 +10,7 @@
 По адресу: ```http://mysite.ru/my-article.html?amp``` - будет отображена AMP версия статьи.
 
 Проверить валидность можете по сервису: ```https://validator.ampproject.org/#url=```
-
+Проверить микроразметку через сервис: ```https://search.google.com/structured-data/testing-tool/u/0/?url=```
 ***
 
 Вам также **необходимо добавить ссылку на AMP версию на странице статьи (article)**.
