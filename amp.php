@@ -1,5 +1,13 @@
 <?php defined('_JEXEC') or die; ?>
 <?php
+
+define('JOOMLA_MINIMUM_PHP_AMP', '5.5');
+
+if (version_compare(PHP_VERSION, JOOMLA_MINIMUM_PHP_AMP, '<'))
+{
+	die('Please upgrade PHP to use ' . JOOMLA_MINIMUM_PHP_AMP . ' or higher');
+}
+<?php
 require_once __DIR__ . '/amp/amp/vendor/autoload.php';
 use Lullabot\AMP\AMP;
 use Lullabot\AMP\Validate\Scope;
