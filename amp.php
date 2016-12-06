@@ -66,7 +66,7 @@ use Lullabot\AMP\Validate\Scope;
   echo '<script type="application/ld+json">{
     "@context": "http://schema.org",
     "@type": "NewsArticle",
-    "headline": "'.JString::substr(str_replace(' - antifashist', '',$titlewithoutquote), 0, 110).'",
+    "headline": "'.JString::substr(str_replace(' - mysite', '',$titlewithoutquote), 0, 110).'",
     "description": "'.$descr.'",
     "name": "'.$titlewithoutquote.'",
     "url": "'.JURI::current().'",
