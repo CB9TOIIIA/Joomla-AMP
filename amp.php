@@ -7,6 +7,7 @@ if (version_compare(PHP_VERSION, JOOMLA_MINIMUM_PHP_AMP, '<'))
 {
 	die('Please upgrade PHP to use ' . JOOMLA_MINIMUM_PHP_AMP . ' or higher');
 }
+?>
 <?php
 require_once __DIR__ . '/amp/amp/vendor/autoload.php';
 use Lullabot\AMP\AMP;
