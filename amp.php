@@ -1,12 +1,14 @@
 <?php defined('_JEXEC') or die; ?>
 <?php
 
-define('JOOMLA_MINIMUM_PHP_AMP', '5.5');
+preg_match("/\d{1,}.\d{1,}.\d{1,}/", PHP_VERSION, $MyPHPver);
+$MyPHPv = $MyPHPver[0];
 
-if (version_compare(PHP_VERSION, JOOMLA_MINIMUM_PHP_AMP, '<'))
+if ($MyPHPv <= '5.5.30')
 {
-	die('Please upgrade PHP to use ' . JOOMLA_MINIMUM_PHP_AMP . ' or higher');
+		die('Вам нужно обновить PHP до ' . '5.5.30' . ' или выше, чтобы использовать Disqus!');
 }
+
 ?>
 <?php
 require_once __DIR__ . '/amp/amp/vendor/autoload.php';
