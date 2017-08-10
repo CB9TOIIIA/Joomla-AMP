@@ -15,13 +15,17 @@
 
 Вам также **необходимо добавить ссылку на AMP версию на странице статьи (article)**.
 
-```<link rel="amphtml" href="http://mysite.ru/my-article.html?amp" />```
+```<link rel="amphtml" href="http://mysite.ru/my-article.html?tmpl=amp" />```
 
 Если переопредлен:
 
 ```sh
 $document = JFactory::getDocument();
+$view = JRequest::getVar('view', null);
+if ($view == 'article') {
 $document->addCustomTag( '<link rel="amphtml" href="'.JURI::current().'?tmpl=amp" />' );
+}
+
 ```
 
 Не волнуйтесь дублей не будет, т.к. на AMP версии есть canonical:
